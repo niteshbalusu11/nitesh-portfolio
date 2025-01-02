@@ -45,7 +45,6 @@ export default function App() {
             <div className="hidden md:flex space-x-8">
               <motion.a href="#about" className="nav-link" whileHover={{ scale: 1.05 }}>About</motion.a>
               <motion.a href="#experience" className="nav-link" whileHover={{ scale: 1.05 }}>Experience</motion.a>
-              <motion.a href="#skills" className="nav-link" whileHover={{ scale: 1.05 }}>Skills</motion.a>
               <motion.a href="#projects" className="nav-link" whileHover={{ scale: 1.05 }}>Projects</motion.a>
               <motion.a href="#journey" className="nav-link" whileHover={{ scale: 1.05 }}>Journey</motion.a>
             </div>
@@ -130,6 +129,11 @@ export default function App() {
             <SocialLink href="https://github.com/niteshbalusu11/" icon="fa-github" label="GitHub" />
             <SocialLink href="https://www.linkedin.com/in/niteshbalusu/" icon="fa-linkedin" label="LinkedIn" />
             <SocialLink href="https://x.com/nitesh_btc" icon="fa-x-twitter" label="Twitter" />
+            <SocialLink 
+              href="https://drive.google.com/file/d/1trhOGEL0xPxdSDXj0-D17DGjVh2kRZAT/view?usp=sharing" 
+              icon="fa-file-pdf" 
+              label="Resume" 
+            />
           </motion.div>
 
           <motion.div 
@@ -232,55 +236,6 @@ export default function App() {
               <TechPill text="Node.js" />
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section id="skills" className="section-container">
-        <motion.h2 
-          className="text-3xl font-bold mb-8 gradient-text"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          Technical Expertise
-        </motion.h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          {[
-            {
-              title: "Development",
-              skills: ["JavaScript", "TypeScript", "Rust", "React", "Node.js"]
-            },
-            {
-              title: "DevOps & Cloud",
-              skills: ["AWS", "CI/CD", "Infrastructure as Code", "Docker"]
-            },
-            {
-              title: "Integration",
-              skills: ["Workday", "ProntoForms", "ADP", "Snowflake"]
-            },
-            {
-              title: "Leadership",
-              skills: ["Team Leadership", "Code Review", "Technical Mentorship", "Best Practices"]
-            }
-          ].map((category, index) => (
-            <motion.div 
-              key={category.title}
-              className="bg-gray-800 p-6 rounded-lg"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ scale: 1.02 }}
-            >
-              <h3 className="text-xl font-semibold mb-4">{category.title}</h3>
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map(skill => (
-                  <TechPill key={skill} text={skill} />
-                ))}
-              </div>
-            </motion.div>
-          ))}
         </div>
       </section>
 
