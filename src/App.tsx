@@ -345,7 +345,7 @@ export default function App() {
         </motion.h2>
         <div className="relative">
           {/* Vertical Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-blue-400 to-purple-500"></div>
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 md:-translate-x-1/2 bg-gradient-to-b from-blue-400 to-purple-500"></div>
           
           {[
             {
@@ -399,20 +399,22 @@ export default function App() {
           ].map((job, index) => (
             <motion.div 
               key={index}
-              className={`relative flex items-center mb-12 ${
-                index % 2 === 0 ? "flex-row-reverse" : ""
+              className={`relative flex items-start md:items-center mb-12 ${
+                index % 2 === 0 ? "md:flex-row-reverse" : ""
               }`}
-              initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 0, y: 50 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               {/* Timeline Point */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full"></div>
+              <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-blue-400 rounded-full transform -translate-y-1/2 md:-translate-x-1/2"></div>
               
               {/* Content */}
               <motion.div 
-                className={`w-5/12 ${index % 2 === 0 ? "pr-12" : "pl-12"}`}
+                className={`pl-12 md:w-5/12 ${
+                  index % 2 === 0 ? "md:pl-0 md:pr-12" : "md:pl-12"
+                }`}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.2 }}
               >
