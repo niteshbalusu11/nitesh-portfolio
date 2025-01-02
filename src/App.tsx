@@ -19,7 +19,7 @@ const SocialLink = ({ href, icon, label }: { href: string; icon: string; label: 
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
   >
-    <i className={`fab ${icon} text-xl`}></i>
+    <i className={`fab ${icon} text-xl`} />
     <span>{label}</span>
   </motion.a>
 )
@@ -74,7 +74,7 @@ export default function App() {
                 className="w-full h-full object-cover"
               />
               {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent" />
             </motion.div>
 
             <div>
@@ -345,7 +345,7 @@ export default function App() {
         </motion.h2>
         <div className="relative">
           {/* Vertical Line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 md:-translate-x-1/2 bg-gradient-to-b from-blue-400 to-purple-500"></div>
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 md:-translate-x-1/2 bg-gradient-to-b from-blue-400 to-purple-500" />
           
           {[
             {
@@ -398,6 +398,7 @@ export default function App() {
             }
           ].map((job, index) => (
             <motion.div 
+              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
               key={index}
               className={`relative flex items-start md:items-center mb-12 ${
                 index % 2 === 0 ? "md:flex-row-reverse" : ""
@@ -408,7 +409,7 @@ export default function App() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               {/* Timeline Point */}
-              <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-blue-400 rounded-full transform -translate-y-1/2 md:-translate-x-1/2"></div>
+              <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-blue-400 rounded-full transform -translate-y-1/2 md:-translate-x-1/2" />
               
               {/* Content */}
               <motion.div 
@@ -429,7 +430,8 @@ export default function App() {
                   <p className="text-gray-400 text-sm mt-1">{job.location}</p>
                   <div className="flex flex-wrap gap-2 mt-4">
                     {job.skills.map((skill, skillIndex) => (
-                      <TechPill key={skillIndex} text={skill} />
+                      // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+<TechPill key={skillIndex} text={skill} />
                     ))}
                   </div>
                 </div>
