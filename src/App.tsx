@@ -2,9 +2,15 @@ import { motion } from 'framer-motion'
 
 const TechPill = ({ text }: { text: string }) => (
   <motion.span 
-    className="tech-pill"
+    className="tech-pill inline-block"
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
+    style={{ willChange: 'transform' }}
+    transition={{ 
+      type: "spring",
+      stiffness: 500,
+      damping: 30
+    }}
   >
     {text}
   </motion.span>
@@ -93,7 +99,7 @@ export default function App() {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.2 }}
                 >
-                  Nitesh C Balusu
+                  Nitesh
                 </motion.span>
                 <motion.span
                   className="text-gray-100"
@@ -130,7 +136,7 @@ export default function App() {
             <SocialLink href="https://www.linkedin.com/in/niteshbalusu/" icon="fa-linkedin" label="LinkedIn" />
             <SocialLink href="https://x.com/nitesh_btc" icon="fa-x-twitter" label="Twitter" />
             <SocialLink 
-              href="https://drive.google.com/file/d/1trhOGEL0xPxdSDXj0-D17DGjVh2kRZAT/view?usp=sharing" 
+              href="https://drive.google.com/file/d/1KqLueNHbSabJ0SqKgsTwE7QnGYk414CS/view" 
               icon="fa-file-pdf" 
               label="Resume" 
             />
