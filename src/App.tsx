@@ -2,14 +2,19 @@ import { motion } from 'framer-motion'
 
 const TechPill = ({ text }: { text: string }) => (
   <motion.span 
-    className="tech-pill inline-block"
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    style={{ willChange: 'transform' }}
+    className="tech-pill select-none touch-none"
+    whileTap={{ scale: 0.97 }}
+    style={{ 
+      willChange: 'transform',
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }}
     transition={{ 
       type: "spring",
-      stiffness: 500,
-      damping: 30
+      stiffness: 700,
+      damping: 30,
+      duration: 0.15
     }}
   >
     {text}
