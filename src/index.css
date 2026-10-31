@@ -1,27 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@utility section-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16;
+}
+
+@utility gradient-text {
+  @apply bg-clip-text text-transparent bg-linear-to-r from-blue-400 to-purple-500;
+}
+
+@utility nav-link {
+  @apply hover:text-blue-400 transition-colors duration-200;
+}
+
+@utility tech-pill {
+  @apply px-3 py-1.5 rounded-full text-sm bg-gray-800 transition-colors duration-200 whitespace-nowrap transform-gpu;
+}
 
 @layer base {
   body {
     @apply bg-gray-900 text-gray-100;
-  }
-}
-
-@layer components {
-  .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16;
-  }
-  
-  .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500;
-  }
-  
-  .nav-link {
-    @apply hover:text-blue-400 transition-colors duration-200;
-  }
-  
-  .tech-pill {
-    @apply px-3 py-1.5 rounded-full text-sm bg-gray-800 transition-colors duration-200 whitespace-nowrap transform-gpu;
   }
 }

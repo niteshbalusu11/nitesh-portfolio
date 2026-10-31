@@ -40,7 +40,7 @@ export default function App() {
     <div className="min-h-screen">
       {/* Navigation */}
       <motion.nav 
-        className="bg-gray-800/80 backdrop-blur-sm fixed w-full z-10"
+        className="bg-gray-800/80 backdrop-blur-xs fixed w-full z-10"
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ type: "spring", stiffness: 100 }}
@@ -85,7 +85,7 @@ export default function App() {
                 className="w-full h-full object-cover"
               />
               {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-gray-900/30 to-transparent" />
             </motion.div>
 
             <div>
@@ -356,7 +356,7 @@ export default function App() {
         </motion.h2>
         <div className="relative">
           {/* Vertical Line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 md:-translate-x-1/2 bg-gradient-to-b from-blue-400 to-purple-500" />
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 md:-translate-x-1/2 bg-linear-to-b from-blue-400 to-purple-500" />
           
           {[
             {
