@@ -7,8 +7,8 @@ My personal portfolio website showcasing my work as a ServiceNow Platform Archit
 ## ⚡ Tech Stack
 
 - **Framework:** React + Vite
-- **Styling:** TailwindCSS
-- **Animations:** Framer Motion
+- **Styling:** Tailwind CSS v4
+- **Hosting:** AWS Amplify (build spec in `amplify.yml`)
 
 ## 🛠️ Setup & Development
 
@@ -20,8 +20,8 @@ My personal portfolio website showcasing my work as a ServiceNow Platform Archit
 
 1. Clone the repository
 ```bash
-git clone https://github.com/niteshbalusu11/portfolio.git
-cd portfolio
+git clone https://github.com/niteshbalusu11/nitesh-portfolio.git
+cd nitesh-portfolio
 ```
 
 2. Install dependencies
