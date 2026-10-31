@@ -5,7 +5,7 @@ export const links = {
   github: 'https://github.com/niteshbalusu11',
   linkedin: 'https://www.linkedin.com/in/niteshbalusu/',
   x: 'https://x.com/nitesh_btc',
-  resume: 'https://drive.google.com/file/d/1KqLueNHbSabJ0SqKgsTwE7QnGYk414CS/view',
+  resume: 'https://drive.google.com/file/d/1xd9-Enmp2rbwPahgs57D56XBgOluQlME/view',
 }
 
 export const pgpFingerprint = 'CC47 A0DD 451A FD54 78A6 2F52 59B4 7B65 9C06 F755'
